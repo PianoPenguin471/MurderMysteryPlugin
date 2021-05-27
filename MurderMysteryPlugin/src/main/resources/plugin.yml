@@ -4,3 +4,5 @@ main: pianopenguin471.murdermysteryplugin.Main
 api-version: 1.16
 authors: [ PianoPenguin471 ]
 description: Murder Mystery Plugin for the minigame server
+commands:
+  start:
