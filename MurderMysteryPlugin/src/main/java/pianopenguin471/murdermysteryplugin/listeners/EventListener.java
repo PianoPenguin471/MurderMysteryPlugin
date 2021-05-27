@@ -30,6 +30,7 @@ public class EventListener implements Listener {
 							if (currentGame.INNOCENTS.isEmpty() && currentGame.DETECTIVE == null) {
 								for (Player player : Bukkit.getOnlinePlayers()) {
 									player.sendTitle(ChatColor.DARK_RED + "All innocents have been killed, murderers win", "", 10, 70, 20);
+									Main.currentGame = null;
 								}
 							}
 							
@@ -57,6 +58,7 @@ public class EventListener implements Listener {
 								currentGame.MURDERERS.add(shot);
 								for (Player player : Bukkit.getOnlinePlayers()) {
 									player.sendTitle(ChatColor.GREEN + "All murderers have been killed, innocents win", "", 10, 70, 20);
+									Main.currentGame = null;
 								}
 							}
 						} else {
@@ -73,6 +75,7 @@ public class EventListener implements Listener {
 							if (currentGame.INNOCENTS.isEmpty() && currentGame.DETECTIVE == null) {
 								for (Player player : Bukkit.getOnlinePlayers()) {
 									player.sendTitle(ChatColor.DARK_RED + "All innocents have been killed, murderers win", "", 10, 70, 20);
+									Main.currentGame = null;
 								}
 							}
 						}
